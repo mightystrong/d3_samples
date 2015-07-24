@@ -1,3 +1,0 @@
-== README
-
-A D3 playground from D3.js In Action.
