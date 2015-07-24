@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "pages#index"
 
-  get "/hello_world" => 'pages#hello_world'
-  get "/hello_world_circles" => 'pages#hello_world_circles'
-  get "/d3_conversation" => 'pages#d3_conversation'
+  get "chapter_one/hello_world" => 'chapter_one_pages#hello_world'
+  get "chapter_one/hello_world_circles" => 'chapter_one_pages#hello_world_circles'
+  get "chapter_one/d3_conversation" => 'chapter_one_pages#d3_conversation'
 end
