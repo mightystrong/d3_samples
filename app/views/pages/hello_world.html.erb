@@ -1,0 +1,14 @@
+<h2 id="161">1.6.1 Hello World with divs</h2>
+
+<p><strong>Result:</strong></p>
+<%= javascript_tag do %>
+  d3.select("body").append("div")
+    .style("border", "1px black solid")
+    .html("hello world");
+
+  d3.select("div")
+    .style("background-color", "pink")
+    .style("font-size", "24px")
+    .attr("class", "d3div")
+    .on("click", function() { console.log("You clicked a div") });
+<% end %>

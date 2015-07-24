@@ -43,3 +43,8 @@ group :development, :test do
   gem 'spring'
 end
 
+# Graphing #
+############
+
+# NVD3 for graphing data - https://github.com/dbackowski/novus-nvd3-rails
+gem 'novus-nvd3-rails'
