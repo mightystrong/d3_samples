@@ -1,0 +1,15 @@
+<h2 id="221">2.2.1 Selections and Binding</h2>
+
+<p><strong>Result:</strong></p>
+<%= javascript_tag do %>
+  d3.csv("<%= asset_path("cities.csv") %>", function(error, data) { dataViz(data); });
+  function dataViz(incomingData) {
+    console.log(incomingData)
+    d3.select("body").selectAll("div.cities")
+      .data(incomingData)
+      .enter()
+      .append("div")
+      .attr("class", "cities")
+      .html(function(d, i) { return d.label });
+  }
+<% end %>

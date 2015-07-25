@@ -1,4 +1,7 @@
 class ChapterOnePagesController < ApplicationController
+  def d3ia
+  end
+
   def hello_world
   end
 
