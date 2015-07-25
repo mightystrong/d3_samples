@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   # Chapter Two
   get "chapter_two/selections_and_binding" => 'chapter_two_pages#selections_and_binding'
+  get "chapter_two/d3ia_continued" => 'chapter_two_pages#d3ia_continued'
 end
