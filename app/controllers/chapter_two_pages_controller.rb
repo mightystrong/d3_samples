@@ -8,4 +8,7 @@ class ChapterTwoPagesController < ApplicationController
 
   def integrating_scales
   end
+
+  def bar_chart
+  end
 end
