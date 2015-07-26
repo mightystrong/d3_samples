@@ -15,9 +15,29 @@
 }
 
 circle {
-  fill: red;
+  fill: pink;
+  stroke: black;
+  stroke-width: 1px;
+  &.active {
+    fill: red;
+  }
+  &.inactive {
+    fill: gray;
+  }
 }
 
 rect {
   fill: darkgray;
+}
+
+text {
+  font-size: 10px;
+}
+
+g {
+  text {
+    &.active {
+      font-size: 30px;
+    }
+  }
 }

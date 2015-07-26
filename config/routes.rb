@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   get "chapter_two/scatterplot" => 'chapter_two_pages#scatterplot'
   get "chapter_two/g_element_labels" => 'chapter_two_pages#g_element_labels'
   get "chapter_two/key_value" => 'chapter_two_pages#key_value'
+
+  # Chapter Three
+  get "chapter_three/external_libraries" => 'chapter_three_pages#external_libraries'
 end
