@@ -19,4 +19,5 @@ Rails.application.routes.draw do
 
   # Chapter Three
   get "chapter_three/external_libraries" => 'chapter_three_pages#external_libraries'
+  get "chapter_three/events" => 'chapter_three_pages#events'
 end
