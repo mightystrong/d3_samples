@@ -11,4 +11,7 @@ class ChapterTwoPagesController < ApplicationController
 
   def bar_chart
   end
+
+  def tweets_chart
+  end
 end

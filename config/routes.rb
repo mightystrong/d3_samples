@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get "chapter_two/accessing_data" => 'chapter_two_pages#accessing_data'
   get "chapter_two/integrating_scales" => 'chapter_two_pages#integrating_scales'
   get "chapter_two/bar_chart" => 'chapter_two_pages#bar_chart'
+  get "chapter_two/tweets_chart" => 'chapter_two_pages#tweets_chart'
 end
