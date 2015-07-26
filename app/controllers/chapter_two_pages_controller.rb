@@ -17,4 +17,7 @@ class ChapterTwoPagesController < ApplicationController
 
   def scatterplot
   end
+
+  def g_element_labels
+  end
 end
