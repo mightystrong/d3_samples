@@ -20,6 +20,7 @@
 
     var yScale = d3.scale.linear().domain([0, maxTweets]).range([0, 100]);
 
+    d3.select("svg").attr("style", "height: 480px; width: 600px;");
     d3.select("svg")
       .selectAll("rect")
       .data(nestedTweets)

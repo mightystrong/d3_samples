@@ -14,4 +14,7 @@ class ChapterTwoPagesController < ApplicationController
 
   def tweets_chart
   end
+
+  def scatterplot
+  end
 end
