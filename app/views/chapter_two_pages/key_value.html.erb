@@ -1,4 +1,4 @@
-<h2>2.6 Creating labels on <%= "<g>" %> elements</h2>
+<h2>2.7 Setting the key value in data-binding</h2>
 
 <p><strong>Result:</strong></p>
 <div id="infovizDiv">
@@ -18,7 +18,7 @@
     var startEnd = d3.extent(incomingData, function(el) {
       return el.tweetTime;
     });
-    var timeRamp = d3.time.scale().domain(startEnd).range([20, 480]);
+    var timeRamp = d3.time.scale().domain(startEnd).range([20, 450]);
     var yScale = d3.scale.linear().domain([0, maxImpact]).range([0, 460]);
     var radiusScale = d3.scale.linear()
                         .domain([0, maxImpact]).range([1, 20]);
@@ -28,7 +28,9 @@
 
     d3.select("svg")
       .selectAll("circle")
-      .data(incomingData)
+      .data(incomingData, function(d) {
+        return JSON.stringify(d)
+      })
       .enter()
       .append("circle")
       .attr("r", function(d) { return radiusScale(d.impact); })
@@ -38,24 +40,12 @@
       .style("stroke", "black")
       .style("stroke-width", "1px");
 
-    var tweetG = d3.select("svg")
-                   .selectAll("g")
-                   .data(incomingData)
-                   .enter()
-                   .append("g")
-                   .attr("transform", function(d) {
-                     return "translate(" +
-                        timeRamp(d.tweetTime) + "," + (480 - yScale(d.impact))
-                     + ")";
-                   });
-
-    tweetG.append("circle")
-          .attr("r", function(d) { return radiusScale(d.impact); })
-          .style("fill", "#990000")
-          .style("stroke", "black")
-          .style("stroke-width", "1px");
-
-    tweetG.append("text")
-          .text(function(d) { return d.user + "-" + d.tweetTime.getHours(); });
+    var filteredData = incomingData.filter(
+      function(el) { return el.impact > 0 }
+    );
+    d3.selectAll("circle")
+      .data(filteredData, function(d) { return JSON.stringify(d) })
+      .exit()
+      .remove();
   }
 <% end %>

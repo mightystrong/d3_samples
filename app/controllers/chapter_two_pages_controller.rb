@@ -20,4 +20,7 @@ class ChapterTwoPagesController < ApplicationController
 
   def g_element_labels
   end
+
+  def key_value
+  end
 end
