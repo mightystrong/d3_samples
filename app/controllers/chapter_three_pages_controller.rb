@@ -8,4 +8,7 @@ class ChapterThreePagesController < ApplicationController
 
   def graphical_transitions
   end
+
+  def dom_manipulation
+  end
 end

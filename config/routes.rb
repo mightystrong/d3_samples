@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   get "chapter_three/external_libraries" => 'chapter_three_pages#external_libraries'
   get "chapter_three/events" => 'chapter_three_pages#events'
   get "chapter_three/graphical_transitions" => 'chapter_three_pages#graphical_transitions'
+  get "chapter_three/dom_manipulation" => 'chapter_three_pages#dom_manipulation'
 end
