@@ -5,4 +5,7 @@ class ChapterThreePagesController < ApplicationController
 
   def events
   end
+
+  def graphical_transitions
+  end
 end
